@@ -5,6 +5,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
+        y <- NULL
         set <- function(y) {
                 x <<- y
                 m <<- NULL
@@ -22,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ##above. And calculates the inverse if it has not already been calculated. And if the 
 ##matrix has not changed then"cacheSolve" should retrieve the inverse from the cache.
 
-}
+
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
         if(!is.null(m)) {
